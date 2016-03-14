@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option java_package = "com.eeepay.api.grpc";
+option java_outer_classname = "AgentSerProto";
+
+service AgentService {
+rpc getAgentInfoRpc (AgentRequest) returns (AgentResponse) {};
+}
+
+message AgentRequest {
+	int32 id = 1;
+	string agent_status = 2;
+	int32 parent_id = 3;
+	string agent_no = 4;
+	string agent_name = 5;
+	string agent_link_name = 6;
+	string agent_link_tel = 7;
+	string agent_link_mail = 8;
+	string parent_node = 9;
+	string self_node = 10;
+}
+
+message AgentResponse {
+	string rpcHead =1;
+	string rpcStatus =2;
+	string rpcMsg =3;
+	int32 id = 4;
+	string agent_status = 5;
+	int32 parent_id = 6;
+	string agent_no = 7;
+	string agent_name = 8;
+	string agent_link_name = 9;
+	string agent_link_tel = 10;
+	string agent_link_mail = 11;
+	string parent_node = 12;
+	string self_node = 13;
+}
