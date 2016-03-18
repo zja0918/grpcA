@@ -17,7 +17,7 @@ public class MyServer {
 		ApplicationContext ac=new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
 		ServerBuilder serverBuilder = ServerBuilder.forPort(Constants.API_PORT);
 		//绑定服务1
-		serverBuilder.addService(TestServiceGrpc.bindService(ac.getBean(TestServiceGrpc.TestService.class)));
+		serverBuilder.addService(TestServiceGrpc.bindService(ac.getBean(TestServiceImpl.class)));
 		//启动服务
 		server = serverBuilder.build().start();
 		logger.info("\n\n\n\n\n服务端启动，监听端口： " + Constants.API_PORT);
