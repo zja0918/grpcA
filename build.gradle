@@ -75,6 +75,8 @@ dependencies {
     compile 'com.alibaba:fastjson:1.1.15'
     compile 'com.google.protobuf:protobuf-java:3.0.0-beta-2'
     compile 'io.grpc:grpc-all:0.13.1'
+    compile 'org.springframework:spring-context:4.2.5.RELEASE'
+    compile 'org.springframework:spring-beans:4.2.5.RELEASE'
     testCompile 'junit:junit:4.11'
 }
 
