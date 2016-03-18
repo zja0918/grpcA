@@ -1,31 +1,24 @@
 package com.eeepay.api.servers;
-import java.util.logging.Logger;
-
+import com.eeepay.api.grpc.TestServiceGrpc;
+import com.eeepay.api.utils.Constants;
+import io.grpc.Server;
+import io.grpc.ServerBuilder;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.eeepay.api.grpc.AgentServiceGrpc;
-import com.eeepay.api.utils.Constants;
-import com.z.grpc.dev.DevDemoServiceGrpc;
-import com.z.grpc.domain.ManagerServiceGrpc;
-import com.z.grpc.domain.ManagerServiceGrpc.ManagerService;
-
-import io.grpc.Server;
-import io.grpc.ServerBuilder;
+import java.util.logging.Logger;
 
 public class MyServer {
 	private static final Logger logger = Logger.getLogger(MyServer.class.getName());
 
 	private Server server;
 
-	private void start(String method) throws Exception {
+	private void start() throws Exception {
 		ApplicationContext ac=new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
-		System.out.println(ac.getBean(AgentServiceImpl.class));
 		ServerBuilder serverBuilder = ServerBuilder.forPort(Constants.API_PORT);
 		//绑定服务1
-		serverBuilder.addService(AgentServiceGrpc.bindService(ac.getBean(AgentServiceImpl.class)));
-		serverBuilder.addService(DevDemoServiceGrpc.bindService(ac.getBean(AgentServiceImpl.class)));
-		serverBuilder.addService(ManagerServiceGrpc.bindService(ac.getBean(AgentServiceImpl.class)));
+		serverBuilder.addService(TestServiceGrpc.bindService(ac.getBean(TestServiceGrpc.TestService.class)));
+		//启动服务
 		server = serverBuilder.build().start();
 		logger.info("\n\n\n\n\n服务端启动，监听端口： " + Constants.API_PORT);
 	}
@@ -44,7 +37,7 @@ public class MyServer {
 
 	public static void main(String[] args) throws Exception {
 		final MyServer searchServer = new MyServer();
-		searchServer.start("myServer");
+		searchServer.start();
 		searchServer.blockUntilShutdown();
 	}
 
