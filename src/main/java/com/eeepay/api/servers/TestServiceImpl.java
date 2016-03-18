@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class TestServiceImpl implements TestService {
     @Override
     public void getInfoRpc(TestProto.TestRequest request, StreamObserver<TestProto.TestResponse> responseObserver) {
-        TestProto.TestResponse res = TestProto.TestResponse.newBuilder().setAgentLinkMail("").build();
+        TestProto.TestResponse res = TestProto.TestResponse.newBuilder().setAgentLinkMail("service@service.com").build();
         responseObserver.onNext(res);
         responseObserver.onCompleted();
     }

@@ -4,6 +4,7 @@ import com.eeepay.api.grpc.TestProto;
 import com.eeepay.api.grpc.TestServiceGrpc;
 import com.eeepay.api.utils.Constants;
 import io.grpc.ManagedChannel;
+import io.grpc.ManagedChannelBuilder;
 
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
@@ -19,16 +20,16 @@ public class TestClient {
     private final TestServiceGrpc.TestServiceStub stub;
 
     public TestClient(String host, int port) {
-        this.channel = null;
-        blockingStub = null;
-        futureStub = null;
-        stub = null;
+        this.channel = ManagedChannelBuilder.forAddress(host,port).usePlaintext(true).build();
+        blockingStub = TestServiceGrpc.newBlockingStub(channel);
+        futureStub = TestServiceGrpc.newFutureStub(channel);
+        stub = TestServiceGrpc.newStub(channel);
     }
     public void shutdown() throws InterruptedException {
         channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
     }
     public void testMethod(){
-        TestProto.TestRequest request = TestProto.TestRequest.newBuilder().setAgentLinkMail("").build();
+        TestProto.TestRequest request = TestProto.TestRequest.newBuilder().setAgentLinkMail("client@client.com").build();
         TestProto.TestResponse response = blockingStub.getInfoRpc(request);
         System.out.println(request +"<>"+response);
     }
