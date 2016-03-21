@@ -4,7 +4,8 @@ option java_package = "com.eeepay.api.grpc";
 option java_outer_classname = "TestProto";
 
 service TestService {
-rpc getInfoRpc (TestRequest) returns (TestResponse) {};
+	rpc getInfoRpc (TestRequest) returns (TestResponse) {};
+	rpc getListInfoRpc (TestRequest) returns (ListResponse) {};
 }
 
 message TestRequest {
@@ -34,4 +35,10 @@ message TestResponse {
 	string agent_link_mail = 11;
 	string parent_node = 12;
 	string self_node = 13;
+}
+message ListResponse {
+	string rpcHead =1;
+	string rpcStatus =2;
+	string rpcMsg =3;
+	repeated TestResponse list_response = 4;
 }

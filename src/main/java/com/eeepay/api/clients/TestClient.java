@@ -1,6 +1,9 @@
 package com.eeepay.api.clients;
 
 import com.eeepay.api.grpc.TestProto;
+import com.eeepay.api.grpc.TestProto.ListResponse;
+import com.eeepay.api.grpc.TestProto.TestRequest;
+import com.eeepay.api.grpc.TestProto.TestResponse;
 import com.eeepay.api.grpc.TestServiceGrpc;
 import com.eeepay.api.utils.Constants;
 import io.grpc.ManagedChannel;
@@ -29,9 +32,11 @@ public class TestClient {
         channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
     }
     public void testMethod(){
-        TestProto.TestRequest request = TestProto.TestRequest.newBuilder().setAgentLinkMail("client@client.com").build();
-        TestProto.TestResponse response = blockingStub.getInfoRpc(request);
+        TestRequest request = TestRequest.newBuilder().setAgentLinkMail("client@client.com").build();
+        TestResponse response = blockingStub.getInfoRpc(request);
         System.out.println(request +"<>"+response);
+        ListResponse lisRes = blockingStub.getListInfoRpc(request);
+        System.out.println(request +"<>"+lisRes);
     }
     public static void main(String[] args) throws InterruptedException {
         TestClient client = new TestClient(Constants.API_IP,Constants.API_PORT);

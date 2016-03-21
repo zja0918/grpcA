@@ -30,6 +30,15 @@ public class TestServiceGrpc {
               "TestService", "getInfoRpc"),
           io.grpc.protobuf.ProtoUtils.marshaller(com.eeepay.api.grpc.TestProto.TestRequest.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.eeepay.api.grpc.TestProto.TestResponse.getDefaultInstance()));
+  @io.grpc.ExperimentalApi
+  public static final io.grpc.MethodDescriptor<com.eeepay.api.grpc.TestProto.TestRequest,
+      com.eeepay.api.grpc.TestProto.ListResponse> METHOD_GET_LIST_INFO_RPC =
+      io.grpc.MethodDescriptor.create(
+          io.grpc.MethodDescriptor.MethodType.UNARY,
+          generateFullMethodName(
+              "TestService", "getListInfoRpc"),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.eeepay.api.grpc.TestProto.TestRequest.getDefaultInstance()),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.eeepay.api.grpc.TestProto.ListResponse.getDefaultInstance()));
 
   public static TestServiceStub newStub(io.grpc.Channel channel) {
     return new TestServiceStub(channel);
@@ -49,16 +58,24 @@ public class TestServiceGrpc {
 
     public void getInfoRpc(com.eeepay.api.grpc.TestProto.TestRequest request,
         io.grpc.stub.StreamObserver<com.eeepay.api.grpc.TestProto.TestResponse> responseObserver);
+
+    public void getListInfoRpc(com.eeepay.api.grpc.TestProto.TestRequest request,
+        io.grpc.stub.StreamObserver<com.eeepay.api.grpc.TestProto.ListResponse> responseObserver);
   }
 
   public static interface TestServiceBlockingClient {
 
     public com.eeepay.api.grpc.TestProto.TestResponse getInfoRpc(com.eeepay.api.grpc.TestProto.TestRequest request);
+
+    public com.eeepay.api.grpc.TestProto.ListResponse getListInfoRpc(com.eeepay.api.grpc.TestProto.TestRequest request);
   }
 
   public static interface TestServiceFutureClient {
 
     public com.google.common.util.concurrent.ListenableFuture<com.eeepay.api.grpc.TestProto.TestResponse> getInfoRpc(
+        com.eeepay.api.grpc.TestProto.TestRequest request);
+
+    public com.google.common.util.concurrent.ListenableFuture<com.eeepay.api.grpc.TestProto.ListResponse> getListInfoRpc(
         com.eeepay.api.grpc.TestProto.TestRequest request);
   }
 
@@ -85,6 +102,13 @@ public class TestServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_INFO_RPC, getCallOptions()), request, responseObserver);
     }
+
+    @java.lang.Override
+    public void getListInfoRpc(com.eeepay.api.grpc.TestProto.TestRequest request,
+        io.grpc.stub.StreamObserver<com.eeepay.api.grpc.TestProto.ListResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_GET_LIST_INFO_RPC, getCallOptions()), request, responseObserver);
+    }
   }
 
   public static class TestServiceBlockingStub extends io.grpc.stub.AbstractStub<TestServiceBlockingStub>
@@ -108,6 +132,12 @@ public class TestServiceGrpc {
     public com.eeepay.api.grpc.TestProto.TestResponse getInfoRpc(com.eeepay.api.grpc.TestProto.TestRequest request) {
       return blockingUnaryCall(
           getChannel().newCall(METHOD_GET_INFO_RPC, getCallOptions()), request);
+    }
+
+    @java.lang.Override
+    public com.eeepay.api.grpc.TestProto.ListResponse getListInfoRpc(com.eeepay.api.grpc.TestProto.TestRequest request) {
+      return blockingUnaryCall(
+          getChannel().newCall(METHOD_GET_LIST_INFO_RPC, getCallOptions()), request);
     }
   }
 
@@ -134,6 +164,13 @@ public class TestServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_INFO_RPC, getCallOptions()), request);
     }
+
+    @java.lang.Override
+    public com.google.common.util.concurrent.ListenableFuture<com.eeepay.api.grpc.TestProto.ListResponse> getListInfoRpc(
+        com.eeepay.api.grpc.TestProto.TestRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_GET_LIST_INFO_RPC, getCallOptions()), request);
+    }
   }
 
   public static io.grpc.ServerServiceDefinition bindService(
@@ -150,6 +187,19 @@ public class TestServiceGrpc {
                 com.eeepay.api.grpc.TestProto.TestRequest request,
                 io.grpc.stub.StreamObserver<com.eeepay.api.grpc.TestProto.TestResponse> responseObserver) {
               serviceImpl.getInfoRpc(request, responseObserver);
+            }
+          }))
+      .addMethod(
+        METHOD_GET_LIST_INFO_RPC,
+        asyncUnaryCall(
+          new io.grpc.stub.ServerCalls.UnaryMethod<
+              com.eeepay.api.grpc.TestProto.TestRequest,
+              com.eeepay.api.grpc.TestProto.ListResponse>() {
+            @java.lang.Override
+            public void invoke(
+                com.eeepay.api.grpc.TestProto.TestRequest request,
+                io.grpc.stub.StreamObserver<com.eeepay.api.grpc.TestProto.ListResponse> responseObserver) {
+              serviceImpl.getListInfoRpc(request, responseObserver);
             }
           })).build();
   }

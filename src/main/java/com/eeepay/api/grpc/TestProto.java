@@ -156,7 +156,7 @@ public final class TestProto {
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               agentStatus_ = s;
               break;
@@ -167,43 +167,43 @@ public final class TestProto {
               break;
             }
             case 34: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               agentNo_ = s;
               break;
             }
             case 42: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               agentName_ = s;
               break;
             }
             case 50: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               agentLinkName_ = s;
               break;
             }
             case 58: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               agentLinkTel_ = s;
               break;
             }
             case 66: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               agentLinkMail_ = s;
               break;
             }
             case 74: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               parentNode_ = s;
               break;
             }
             case 82: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               selfNode_ = s;
               break;
@@ -1682,19 +1682,19 @@ public final class TestProto {
               break;
             }
             case 10: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               rpcHead_ = s;
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               rpcStatus_ = s;
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               rpcMsg_ = s;
               break;
@@ -1705,7 +1705,7 @@ public final class TestProto {
               break;
             }
             case 42: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               agentStatus_ = s;
               break;
@@ -1716,43 +1716,43 @@ public final class TestProto {
               break;
             }
             case 58: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               agentNo_ = s;
               break;
             }
             case 66: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               agentName_ = s;
               break;
             }
             case 74: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               agentLinkName_ = s;
               break;
             }
             case 82: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               agentLinkTel_ = s;
               break;
             }
             case 90: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               agentLinkMail_ = s;
               break;
             }
             case 98: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               parentNode_ = s;
               break;
             }
             case 106: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               selfNode_ = s;
               break;
@@ -3403,6 +3403,1086 @@ public final class TestProto {
 
   }
 
+  public interface ListResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ListResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string rpcHead = 1;</code>
+     */
+    java.lang.String getRpcHead();
+    /**
+     * <code>optional string rpcHead = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getRpcHeadBytes();
+
+    /**
+     * <code>optional string rpcStatus = 2;</code>
+     */
+    java.lang.String getRpcStatus();
+    /**
+     * <code>optional string rpcStatus = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getRpcStatusBytes();
+
+    /**
+     * <code>optional string rpcMsg = 3;</code>
+     */
+    java.lang.String getRpcMsg();
+    /**
+     * <code>optional string rpcMsg = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getRpcMsgBytes();
+
+    /**
+     * <code>repeated .TestResponse list_response = 4;</code>
+     */
+    java.util.List<com.eeepay.api.grpc.TestProto.TestResponse> 
+        getListResponseList();
+    /**
+     * <code>repeated .TestResponse list_response = 4;</code>
+     */
+    com.eeepay.api.grpc.TestProto.TestResponse getListResponse(int index);
+    /**
+     * <code>repeated .TestResponse list_response = 4;</code>
+     */
+    int getListResponseCount();
+    /**
+     * <code>repeated .TestResponse list_response = 4;</code>
+     */
+    java.util.List<? extends com.eeepay.api.grpc.TestProto.TestResponseOrBuilder> 
+        getListResponseOrBuilderList();
+    /**
+     * <code>repeated .TestResponse list_response = 4;</code>
+     */
+    com.eeepay.api.grpc.TestProto.TestResponseOrBuilder getListResponseOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code ListResponse}
+   */
+  public  static final class ListResponse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ListResponse)
+      ListResponseOrBuilder {
+    // Use ListResponse.newBuilder() to construct.
+    private ListResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private ListResponse() {
+      rpcHead_ = "";
+      rpcStatus_ = "";
+      rpcMsg_ = "";
+      listResponse_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private ListResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              rpcHead_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              rpcStatus_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              rpcMsg_ = s;
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                listResponse_ = new java.util.ArrayList<com.eeepay.api.grpc.TestProto.TestResponse>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              listResponse_.add(input.readMessage(com.eeepay.api.grpc.TestProto.TestResponse.parser(), extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          listResponse_ = java.util.Collections.unmodifiableList(listResponse_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.eeepay.api.grpc.TestProto.internal_static_ListResponse_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.eeepay.api.grpc.TestProto.internal_static_ListResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.eeepay.api.grpc.TestProto.ListResponse.class, com.eeepay.api.grpc.TestProto.ListResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int RPCHEAD_FIELD_NUMBER = 1;
+    private volatile java.lang.Object rpcHead_;
+    /**
+     * <code>optional string rpcHead = 1;</code>
+     */
+    public java.lang.String getRpcHead() {
+      java.lang.Object ref = rpcHead_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rpcHead_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string rpcHead = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRpcHeadBytes() {
+      java.lang.Object ref = rpcHead_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rpcHead_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RPCSTATUS_FIELD_NUMBER = 2;
+    private volatile java.lang.Object rpcStatus_;
+    /**
+     * <code>optional string rpcStatus = 2;</code>
+     */
+    public java.lang.String getRpcStatus() {
+      java.lang.Object ref = rpcStatus_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rpcStatus_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string rpcStatus = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRpcStatusBytes() {
+      java.lang.Object ref = rpcStatus_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rpcStatus_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RPCMSG_FIELD_NUMBER = 3;
+    private volatile java.lang.Object rpcMsg_;
+    /**
+     * <code>optional string rpcMsg = 3;</code>
+     */
+    public java.lang.String getRpcMsg() {
+      java.lang.Object ref = rpcMsg_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rpcMsg_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string rpcMsg = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRpcMsgBytes() {
+      java.lang.Object ref = rpcMsg_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rpcMsg_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LIST_RESPONSE_FIELD_NUMBER = 4;
+    private java.util.List<com.eeepay.api.grpc.TestProto.TestResponse> listResponse_;
+    /**
+     * <code>repeated .TestResponse list_response = 4;</code>
+     */
+    public java.util.List<com.eeepay.api.grpc.TestProto.TestResponse> getListResponseList() {
+      return listResponse_;
+    }
+    /**
+     * <code>repeated .TestResponse list_response = 4;</code>
+     */
+    public java.util.List<? extends com.eeepay.api.grpc.TestProto.TestResponseOrBuilder> 
+        getListResponseOrBuilderList() {
+      return listResponse_;
+    }
+    /**
+     * <code>repeated .TestResponse list_response = 4;</code>
+     */
+    public int getListResponseCount() {
+      return listResponse_.size();
+    }
+    /**
+     * <code>repeated .TestResponse list_response = 4;</code>
+     */
+    public com.eeepay.api.grpc.TestProto.TestResponse getListResponse(int index) {
+      return listResponse_.get(index);
+    }
+    /**
+     * <code>repeated .TestResponse list_response = 4;</code>
+     */
+    public com.eeepay.api.grpc.TestProto.TestResponseOrBuilder getListResponseOrBuilder(
+        int index) {
+      return listResponse_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getRpcHeadBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, rpcHead_);
+      }
+      if (!getRpcStatusBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, rpcStatus_);
+      }
+      if (!getRpcMsgBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, rpcMsg_);
+      }
+      for (int i = 0; i < listResponse_.size(); i++) {
+        output.writeMessage(4, listResponse_.get(i));
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getRpcHeadBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, rpcHead_);
+      }
+      if (!getRpcStatusBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, rpcStatus_);
+      }
+      if (!getRpcMsgBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, rpcMsg_);
+      }
+      for (int i = 0; i < listResponse_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, listResponse_.get(i));
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.eeepay.api.grpc.TestProto.ListResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.eeepay.api.grpc.TestProto.ListResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.eeepay.api.grpc.TestProto.ListResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.eeepay.api.grpc.TestProto.ListResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.eeepay.api.grpc.TestProto.ListResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.eeepay.api.grpc.TestProto.ListResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.eeepay.api.grpc.TestProto.ListResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.eeepay.api.grpc.TestProto.ListResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.eeepay.api.grpc.TestProto.ListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.eeepay.api.grpc.TestProto.ListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.eeepay.api.grpc.TestProto.ListResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ListResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ListResponse)
+        com.eeepay.api.grpc.TestProto.ListResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.eeepay.api.grpc.TestProto.internal_static_ListResponse_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.eeepay.api.grpc.TestProto.internal_static_ListResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.eeepay.api.grpc.TestProto.ListResponse.class, com.eeepay.api.grpc.TestProto.ListResponse.Builder.class);
+      }
+
+      // Construct using com.eeepay.api.grpc.TestProto.ListResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getListResponseFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        rpcHead_ = "";
+
+        rpcStatus_ = "";
+
+        rpcMsg_ = "";
+
+        if (listResponseBuilder_ == null) {
+          listResponse_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          listResponseBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.eeepay.api.grpc.TestProto.internal_static_ListResponse_descriptor;
+      }
+
+      public com.eeepay.api.grpc.TestProto.ListResponse getDefaultInstanceForType() {
+        return com.eeepay.api.grpc.TestProto.ListResponse.getDefaultInstance();
+      }
+
+      public com.eeepay.api.grpc.TestProto.ListResponse build() {
+        com.eeepay.api.grpc.TestProto.ListResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.eeepay.api.grpc.TestProto.ListResponse buildPartial() {
+        com.eeepay.api.grpc.TestProto.ListResponse result = new com.eeepay.api.grpc.TestProto.ListResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.rpcHead_ = rpcHead_;
+        result.rpcStatus_ = rpcStatus_;
+        result.rpcMsg_ = rpcMsg_;
+        if (listResponseBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+            listResponse_ = java.util.Collections.unmodifiableList(listResponse_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.listResponse_ = listResponse_;
+        } else {
+          result.listResponse_ = listResponseBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.eeepay.api.grpc.TestProto.ListResponse) {
+          return mergeFrom((com.eeepay.api.grpc.TestProto.ListResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.eeepay.api.grpc.TestProto.ListResponse other) {
+        if (other == com.eeepay.api.grpc.TestProto.ListResponse.getDefaultInstance()) return this;
+        if (!other.getRpcHead().isEmpty()) {
+          rpcHead_ = other.rpcHead_;
+          onChanged();
+        }
+        if (!other.getRpcStatus().isEmpty()) {
+          rpcStatus_ = other.rpcStatus_;
+          onChanged();
+        }
+        if (!other.getRpcMsg().isEmpty()) {
+          rpcMsg_ = other.rpcMsg_;
+          onChanged();
+        }
+        if (listResponseBuilder_ == null) {
+          if (!other.listResponse_.isEmpty()) {
+            if (listResponse_.isEmpty()) {
+              listResponse_ = other.listResponse_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureListResponseIsMutable();
+              listResponse_.addAll(other.listResponse_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.listResponse_.isEmpty()) {
+            if (listResponseBuilder_.isEmpty()) {
+              listResponseBuilder_.dispose();
+              listResponseBuilder_ = null;
+              listResponse_ = other.listResponse_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              listResponseBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getListResponseFieldBuilder() : null;
+            } else {
+              listResponseBuilder_.addAllMessages(other.listResponse_);
+            }
+          }
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.eeepay.api.grpc.TestProto.ListResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.eeepay.api.grpc.TestProto.ListResponse) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object rpcHead_ = "";
+      /**
+       * <code>optional string rpcHead = 1;</code>
+       */
+      public java.lang.String getRpcHead() {
+        java.lang.Object ref = rpcHead_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rpcHead_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string rpcHead = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRpcHeadBytes() {
+        java.lang.Object ref = rpcHead_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rpcHead_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string rpcHead = 1;</code>
+       */
+      public Builder setRpcHead(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        rpcHead_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string rpcHead = 1;</code>
+       */
+      public Builder clearRpcHead() {
+        
+        rpcHead_ = getDefaultInstance().getRpcHead();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string rpcHead = 1;</code>
+       */
+      public Builder setRpcHeadBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        rpcHead_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object rpcStatus_ = "";
+      /**
+       * <code>optional string rpcStatus = 2;</code>
+       */
+      public java.lang.String getRpcStatus() {
+        java.lang.Object ref = rpcStatus_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rpcStatus_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string rpcStatus = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRpcStatusBytes() {
+        java.lang.Object ref = rpcStatus_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rpcStatus_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string rpcStatus = 2;</code>
+       */
+      public Builder setRpcStatus(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        rpcStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string rpcStatus = 2;</code>
+       */
+      public Builder clearRpcStatus() {
+        
+        rpcStatus_ = getDefaultInstance().getRpcStatus();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string rpcStatus = 2;</code>
+       */
+      public Builder setRpcStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        rpcStatus_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object rpcMsg_ = "";
+      /**
+       * <code>optional string rpcMsg = 3;</code>
+       */
+      public java.lang.String getRpcMsg() {
+        java.lang.Object ref = rpcMsg_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rpcMsg_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string rpcMsg = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRpcMsgBytes() {
+        java.lang.Object ref = rpcMsg_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rpcMsg_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string rpcMsg = 3;</code>
+       */
+      public Builder setRpcMsg(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        rpcMsg_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string rpcMsg = 3;</code>
+       */
+      public Builder clearRpcMsg() {
+        
+        rpcMsg_ = getDefaultInstance().getRpcMsg();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string rpcMsg = 3;</code>
+       */
+      public Builder setRpcMsgBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        rpcMsg_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.eeepay.api.grpc.TestProto.TestResponse> listResponse_ =
+        java.util.Collections.emptyList();
+      private void ensureListResponseIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          listResponse_ = new java.util.ArrayList<com.eeepay.api.grpc.TestProto.TestResponse>(listResponse_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.eeepay.api.grpc.TestProto.TestResponse, com.eeepay.api.grpc.TestProto.TestResponse.Builder, com.eeepay.api.grpc.TestProto.TestResponseOrBuilder> listResponseBuilder_;
+
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public java.util.List<com.eeepay.api.grpc.TestProto.TestResponse> getListResponseList() {
+        if (listResponseBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(listResponse_);
+        } else {
+          return listResponseBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public int getListResponseCount() {
+        if (listResponseBuilder_ == null) {
+          return listResponse_.size();
+        } else {
+          return listResponseBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public com.eeepay.api.grpc.TestProto.TestResponse getListResponse(int index) {
+        if (listResponseBuilder_ == null) {
+          return listResponse_.get(index);
+        } else {
+          return listResponseBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public Builder setListResponse(
+          int index, com.eeepay.api.grpc.TestProto.TestResponse value) {
+        if (listResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListResponseIsMutable();
+          listResponse_.set(index, value);
+          onChanged();
+        } else {
+          listResponseBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public Builder setListResponse(
+          int index, com.eeepay.api.grpc.TestProto.TestResponse.Builder builderForValue) {
+        if (listResponseBuilder_ == null) {
+          ensureListResponseIsMutable();
+          listResponse_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          listResponseBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public Builder addListResponse(com.eeepay.api.grpc.TestProto.TestResponse value) {
+        if (listResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListResponseIsMutable();
+          listResponse_.add(value);
+          onChanged();
+        } else {
+          listResponseBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public Builder addListResponse(
+          int index, com.eeepay.api.grpc.TestProto.TestResponse value) {
+        if (listResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureListResponseIsMutable();
+          listResponse_.add(index, value);
+          onChanged();
+        } else {
+          listResponseBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public Builder addListResponse(
+          com.eeepay.api.grpc.TestProto.TestResponse.Builder builderForValue) {
+        if (listResponseBuilder_ == null) {
+          ensureListResponseIsMutable();
+          listResponse_.add(builderForValue.build());
+          onChanged();
+        } else {
+          listResponseBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public Builder addListResponse(
+          int index, com.eeepay.api.grpc.TestProto.TestResponse.Builder builderForValue) {
+        if (listResponseBuilder_ == null) {
+          ensureListResponseIsMutable();
+          listResponse_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          listResponseBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public Builder addAllListResponse(
+          java.lang.Iterable<? extends com.eeepay.api.grpc.TestProto.TestResponse> values) {
+        if (listResponseBuilder_ == null) {
+          ensureListResponseIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, listResponse_);
+          onChanged();
+        } else {
+          listResponseBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public Builder clearListResponse() {
+        if (listResponseBuilder_ == null) {
+          listResponse_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          listResponseBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public Builder removeListResponse(int index) {
+        if (listResponseBuilder_ == null) {
+          ensureListResponseIsMutable();
+          listResponse_.remove(index);
+          onChanged();
+        } else {
+          listResponseBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public com.eeepay.api.grpc.TestProto.TestResponse.Builder getListResponseBuilder(
+          int index) {
+        return getListResponseFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public com.eeepay.api.grpc.TestProto.TestResponseOrBuilder getListResponseOrBuilder(
+          int index) {
+        if (listResponseBuilder_ == null) {
+          return listResponse_.get(index);  } else {
+          return listResponseBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public java.util.List<? extends com.eeepay.api.grpc.TestProto.TestResponseOrBuilder> 
+           getListResponseOrBuilderList() {
+        if (listResponseBuilder_ != null) {
+          return listResponseBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(listResponse_);
+        }
+      }
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public com.eeepay.api.grpc.TestProto.TestResponse.Builder addListResponseBuilder() {
+        return getListResponseFieldBuilder().addBuilder(
+            com.eeepay.api.grpc.TestProto.TestResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public com.eeepay.api.grpc.TestProto.TestResponse.Builder addListResponseBuilder(
+          int index) {
+        return getListResponseFieldBuilder().addBuilder(
+            index, com.eeepay.api.grpc.TestProto.TestResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .TestResponse list_response = 4;</code>
+       */
+      public java.util.List<com.eeepay.api.grpc.TestProto.TestResponse.Builder> 
+           getListResponseBuilderList() {
+        return getListResponseFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.eeepay.api.grpc.TestProto.TestResponse, com.eeepay.api.grpc.TestProto.TestResponse.Builder, com.eeepay.api.grpc.TestProto.TestResponseOrBuilder> 
+          getListResponseFieldBuilder() {
+        if (listResponseBuilder_ == null) {
+          listResponseBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.eeepay.api.grpc.TestProto.TestResponse, com.eeepay.api.grpc.TestProto.TestResponse.Builder, com.eeepay.api.grpc.TestProto.TestResponseOrBuilder>(
+                  listResponse_,
+                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  getParentForChildren(),
+                  isClean());
+          listResponse_ = null;
+        }
+        return listResponseBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ListResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ListResponse)
+    private static final com.eeepay.api.grpc.TestProto.ListResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.eeepay.api.grpc.TestProto.ListResponse();
+    }
+
+    public static com.eeepay.api.grpc.TestProto.ListResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListResponse>() {
+      public ListResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new ListResponse(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListResponse> getParserForType() {
+      return PARSER;
+    }
+
+    public com.eeepay.api.grpc.TestProto.ListResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_TestRequest_descriptor;
   private static
@@ -3413,6 +4493,11 @@ public final class TestProto {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_TestResponse_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_ListResponse_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ListResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3434,10 +4519,14 @@ public final class TestProto {
       "gent_no\030\007 \001(\t\022\022\n\nagent_name\030\010 \001(\t\022\027\n\017age",
       "nt_link_name\030\t \001(\t\022\026\n\016agent_link_tel\030\n \001" +
       "(\t\022\027\n\017agent_link_mail\030\013 \001(\t\022\023\n\013parent_no" +
-      "de\030\014 \001(\t\022\021\n\tself_node\030\r \001(\t2:\n\013TestServi" +
-      "ce\022+\n\ngetInfoRpc\022\014.TestRequest\032\r.TestRes" +
-      "ponse\"\000B \n\023com.eeepay.api.grpcB\tTestProt" +
-      "ob\006proto3"
+      "de\030\014 \001(\t\022\021\n\tself_node\030\r \001(\t\"h\n\014ListRespo" +
+      "nse\022\017\n\007rpcHead\030\001 \001(\t\022\021\n\trpcStatus\030\002 \001(\t\022" +
+      "\016\n\006rpcMsg\030\003 \001(\t\022$\n\rlist_response\030\004 \003(\0132\r" +
+      ".TestResponse2k\n\013TestService\022+\n\ngetInfoR" +
+      "pc\022\014.TestRequest\032\r.TestResponse\"\000\022/\n\016get" +
+      "ListInfoRpc\022\014.TestRequest\032\r.ListResponse" +
+      "\"\000B \n\023com.eeepay.api.grpcB\tTestProtob\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3463,6 +4552,12 @@ public final class TestProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_TestResponse_descriptor,
         new java.lang.String[] { "RpcHead", "RpcStatus", "RpcMsg", "Id", "AgentStatus", "ParentId", "AgentNo", "AgentName", "AgentLinkName", "AgentLinkTel", "AgentLinkMail", "ParentNode", "SelfNode", });
+    internal_static_ListResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_ListResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ListResponse_descriptor,
+        new java.lang.String[] { "RpcHead", "RpcStatus", "RpcMsg", "ListResponse", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

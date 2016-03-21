@@ -20,7 +20,7 @@ public class MyServer {
 		serverBuilder.addService(TestServiceGrpc.bindService(ac.getBean(TestServiceImpl.class)));
 		//启动服务
 		server = serverBuilder.build().start();
-		logger.info("\n\n\n\n\n服务端启动，监听端口： " + Constants.API_PORT);
+		logger.info("\n\n服务端启动，监听端口： " + Constants.API_PORT);
 	}
 
 	private void stop() {
