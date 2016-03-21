@@ -477,28 +477,6 @@ public class Dao {
 		String agentNo = null;
 		String realName = null;
 		logger.info("\n\t操作者:{};操作者编号:{};操作结果受影响行数：{};\n\tSQL:{};\n\tParams:{};",new Object[]{realName,agentNo,affectedRows,sql,params});
-		if("需要将日志写入到库中".equals("暂时不需要将日志写入到库中")){
-			try {
-				queryRunner = new QueryRunner(dataSource);
-				String sql_temp = "insert into loginfo_agent ( agent_no, real_name, suc_rows, opsql, opparams) values (?,?,?,?,?)";
-				if (null != params) {
-					if(params instanceof Object[]){
-						Object[] objs = (Object[]) params;
-						params = Arrays.toString(objs);
-					}
-					StringBuffer sb_params = new StringBuffer(""+params);
-					if (sb_params.length()>999) {
-						sb_params.substring(0, 950);
-						sb_params.append(" --- 详情请查询日志文件");
-					}
-					queryRunner.update(sql_temp,new Object[]{agentNo,realName,affectedRows,sql,sb_params.toString()});
-				}else{
-					queryRunner.update(sql_temp,new Object[]{realName,agentNo,affectedRows,sql,null});
-				}
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
 	}
 	
 	/**
